@@ -1,4 +1,3 @@
-import reactLogo from '../../assets/react.svg';
 
 const TodoData = (props) => {
   const { listTasks } = props;
