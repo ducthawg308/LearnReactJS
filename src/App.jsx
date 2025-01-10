@@ -1,6 +1,7 @@
 import './components/Example/todo.css';
 import { useState } from "react";
 import TodoData from './components/Example/TodoData';
+import reactLogo from './assets/react.svg';
 import TodoNew from './components/Example/TodoNew';
 
 
@@ -24,9 +25,7 @@ const App = () => {
         <TodoNew 
           addTask={addTask}
         />
-        <TodoData 
-          listTasks={listTasks}
-        />
+        {listTasks && listTasks.length > 0 ? <TodoData listTasks={listTasks}/> : <div className="todo-image"> <img className='logo' src={reactLogo} alt="todo" /></div>}
       </div>
     </div>
   )
